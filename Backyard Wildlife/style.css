@@ -2,9 +2,22 @@
 body {
   font-family: "Cabin", sans-serif;
   margin-top: 10px;
-  background-color: burlywood;
+  background: linear-gradient(
+    45deg,
+    rgb(67, 147, 163) 0%,
+    rgb(67, 147, 163) 59%,
+    rgb(93, 161, 169) 59%,
+    rgb(93, 161, 169) 65%,
+    rgb(119, 175, 175) 65%,
+    rgb(119, 175, 175) 70%,
+    rgb(145, 190, 181) 70%,
+    rgb(145, 190, 181) 73%,
+    rgb(171, 204, 187) 73%,
+    rgb(171, 204, 187) 78%,
+    rgb(197, 218, 193) 78%,
+    rgb(197, 218, 193) 100%
+  );
 }
-
 .welcome {
   margin-bottom: 2em;
   text-align: center;
@@ -19,7 +32,7 @@ body {
 /*--- NAV BAR ---*/
 .nav-wrap {
   display: flex;
-  padding: 38px;
+  padding: 40px;
   justify-content: space-between;
 }
 
@@ -45,7 +58,6 @@ body {
   color: rgb(255, 0, 221);
   font-weight: bolder;
   font-size: large;
-  display: block;
 }
 
 .visit {
@@ -77,9 +89,7 @@ body {
 
 /*--- MAIN ---*/
 .welcome {
-  background-image: radial-gradient(blue, rgb(122, 78, 19));
-  border-radius: 2em;
-  color: goldenrod;
+  color: darkblue;
 }
 
 .pic-intro {
@@ -140,9 +150,8 @@ body {
 
 .gear-background {
   background-size: 100%;
-  background-position: center;
+  background-position: cover;
   background-repeat: no-repeat;
   height: 800px;
   max-width: 100%;
-  border: 2px solid black;
 }
