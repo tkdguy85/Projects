@@ -1,0 +1,241 @@
+body {
+  padding-bottom: 50px;
+  margin: 0 auto;
+  font-family: fantasy, sans-serif;
+}
+
+.main-wall {
+  padding: 0;
+  background: linear-gradient(
+    -60.76deg,
+    rgb(150, 121, 255) 0%,
+    rgb(212, 153, 234) 57.96%,
+    rgb(238, 164, 179) 100%
+  );
+}
+
+.sub-title span {
+  color: red;
+  font-weight: bold;
+}
+.grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 20px;
+  padding: 0 40px;
+  grid-template-areas: ". content content content content .";
+}
+
+.grid-video {
+  margin-top: 50px;
+  align-items: center;
+  grid-template-areas: "video video video book book book";
+}
+
+.grid-video video {
+  grid-area: video;
+  width: 80%;
+  max-width: 700px;
+}
+
+.grid-product-info {
+  margin-top: 4rem;
+}
+
+.product-detail {
+  grid-column: span 2;
+  margin: 2rem;
+}
+
+.product-line {
+  text-align: center;
+  font-size: 1.75rem;
+  color: rgb(66, 14, 114);
+  margin-bottom: 2rem;
+}
+
+.product-text {
+  font-size: 1.5rem;
+  font-weight: lightest;
+  color: rgb(17, 1, 6);
+}
+
+.book-section img {
+  grid-area: book;
+  width: 180%;
+  max-width: 700px;
+}
+
+.content {
+  grid-area: content;
+  max-width: 1000px;
+  width: 100%;
+}
+
+.dark-header {
+  background-color: #f5e4c3;
+  color: #0e2431;
+  opacity: 80%;
+}
+
+.brand-row {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.logo {
+  width: 30px;
+  margin-right: 0.5rem;
+}
+
+.title {
+  font-size: 3rem;
+  text-align: center;
+}
+
+.sub-title {
+  font-size: 1.5rem;
+  text-align: center;
+  font-weight: normal;
+}
+
+.email-form {
+  display: flex;
+  justify-content: center;
+  margin-top: 4rem;
+  margin-bottom: 1rem;
+  font-size: 1.75rem;
+}
+
+.email-form input {
+  background-color: aqua;
+  color: blue;
+  border: 3px solid blueviolet;
+  border-radius: 0.4em;
+  padding: 0.5em 1em;
+  margin-right: 1em;
+  outline: none;
+  flex-grow: 1;
+}
+
+/* Inside Email sign-up */
+.email-form input:focus {
+  background-color: lightpink;
+}
+
+.email-form button {
+  color: yellow;
+  background-color: darkblue;
+  border: 3px solid goldenrod;
+  border-radius: 0.4em;
+  padding: 0.5em 1em;
+  max-width: 250px;
+  cursor: pointer;
+}
+
+.email-form button:hover,
+.email-form button:focus {
+  background-color: blueviolet;
+}
+
+/*-- Multi-platform Visuals 
+Scaling down sizes for viewing on multiple platforms
+--*/
+
+@media (max-width: 1200px) {
+  .grid {
+    grid-template-areas: "content";
+    grid-template-columns: 1fr;
+  }
+
+  .grid-video {
+    grid-template-columns: 1fr;
+    grid-template-areas: "video" "book";
+  }
+
+  .grid-video video {
+    justify-self: center;
+  }
+
+  .grid-product-info {
+    grid-template-columns: repeat(6, 1fr);
+  }
+  .book-section {
+    margin-top: 2rem;
+    margin-left: 0;
+    justify-self: center;
+  }
+}
+
+@media (max-width: 1000px) {
+  .grid-product-info {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 800px) {
+  .email-form {
+    flex-direction: column;
+  }
+
+  .email-form button {
+    max-width: initial;
+    width: 100%;
+  }
+
+  .email-form input {
+    margin-right: 0;
+    margin-bottom: 10px;
+    min-width: 100%;
+  }
+
+  .book-pic {
+    font-size: 2rem;
+  }
+
+  .book-pic img {
+    height: 2rem;
+    margin-right: 1rem;
+  }
+}
+
+@media (max-width: 500px) {
+  .brand-name {
+    display: none;
+  }
+
+  .logo {
+    margin-top: 1rem;
+  }
+
+  .email-form {
+    margin: o;
+    font-size: 1.25;
+  }
+
+  .book-pic {
+    font-size: 1.25rem;
+  }
+
+  .book-pic img {
+    margin-right: 0.5rem;
+    height: 1.25rem;
+  }
+
+  .product-line {
+    font-size: 1.25rem;
+  }
+
+  .product-text {
+    font-size: 1.1rem;
+  }
+
+  .product-detail {
+    margin: 1rem;
+  }
+
+  .grid-product-info {
+    margin-top: 1rem;
+  }
+}
